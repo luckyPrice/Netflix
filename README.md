@@ -46,7 +46,7 @@ c25b42cb6f93: 실행할 도커 이미지를 지정하는 고유한 이미지 ID.
 TMDB API 키가 필요.
 
 API 키 생성
-TMDB 웹사이트에 접속해 계정을 생성하고 로그인합니다.
+TMDB 웹사이트에 접속해 계정을 생성하고 로그인.
 프로필 설정에서 "API" 섹션으로 이동하여 새 API 키를 생성.
 API 키를 사용해 Docker 이미지를 다시 빌드.
 docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
@@ -60,7 +60,7 @@ docker build
 여기서는 TMDB_V3_API_KEY라는 이름의 인수를 Dockerfile에 전달하고 있음. 부분에는 실제 API 키 값이 들어가야 함. 이 값은 Dockerfile에서 ARG TMDB_V3_API_KEY로 정의된 변수와 연결되어, 빌드 과정에서 사용됨.
 
 -t netflix
--t는 생성된 이미지에 태그(tag)를 붙이는 옵션입니다. 여기서는 이미지 이름을 netflix로 지정하고 있습니다.
+-t는 생성된 이미지에 태그(tag)를 붙이는 옵션. 여기서는 이미지 이름을 netflix로 지정하고 있음.
 
 . (현재 디렉토리)
 마지막의 .은 Dockerfile이 위치한 디렉토리를 나타냄. 즉, 현재 디렉토리에서 Dockerfile을 찾아 이미지를 빌드한다는 의미.
@@ -178,14 +178,14 @@ CI/CD 파이프라인에서 의존성 보안 검사를 자동화하여 소프트
 프로젝트의 보안 트렌드를 시각화하고, 시간이 지남에 따라 개선 여부를 모니터링.
 취약점이 발견되었을 때 빌드를 중단하거나 경고 상태로 설정해 문제 해결을 유도.
 
-Log4j와 같은 오픈 소스 라이브러리는 편리하지만, 보안 취약점이 발생할 경우 큰 위험을 초래할 수 있습니다. Dependency-Check는 이러한 위험을 사전에 탐지하고 완화할 수 있는 필수적인 도구로, 특히 DevSecOps 환경에서 중요한 역할을 합니다. 이를 통해 개발자는 안전한 소프트웨어를 구축하고 배포할 수 있음.
+Log4j와 같은 오픈 소스 라이브러리는 편리하지만, 보안 취약점이 발생할 경우 큰 위험을 초래할 수 있음. Dependency-Check는 이러한 위험을 사전에 탐지하고 완화할 수 있는 필수적인 도구로, 특히 DevSecOps 환경에서 중요한 역할을 힘. 이를 통해 개발자는 안전한 소프트웨어를 구축하고 배포할 수 있음.
 
 Dependency-Check 도구 구성
 Dependency-Check 플러그인을 설치한 후, 도구를 구성해야 함.
-"Dashboard" → "Manage Jenkins" → "Global Tool Configuration"으로 이동합니다.
+"Dashboard" → "Manage Jenkins" → "Global Tool Configuration"으로 이동.
 "OWASP Dependency-Check" 섹션을 찾음.
 도구 이름(예: "DP-Check")을 추가.
-설정을 저장합니다.
+설정을 저장.
 Docker 도구 및 Docker 플러그인 설치
 Jenkins 웹 인터페이스에서 "Dashboard"로 이동.
 "Manage Jenkins" → "Manage Plugins"로 이동.
@@ -210,7 +210,7 @@ OK 버튼을 눌러 DockerHub 자격 증명을 저장.
 4단계: 모니터링
 Prometheus와 Grafana 설치:
 
-애플리케이션을 모니터링하기 위해 Prometheus와 Grafana를 설정합니다.
+애플리케이션을 모니터링하기 위해 Prometheus와 Grafana를 설정.
 1. Prometheus 설치
 Prometheus 전용 Linux 사용자 생성 및 다운로드:
 
@@ -318,7 +318,7 @@ scrape_configs:
     metrics_path: '/prometheus'
     static_configs:
       - targets: ['<your-jenkins-ip>:<your-jenkins-port>']
-와 를 Jenkins 환경에 맞게 변경합니다.
+와 를 Jenkins 환경에 맞게 변경.
 구성 파일 검증 및 적용:
 
 구성 파일 유효성 검사:
@@ -362,26 +362,26 @@ http://:3000
 
 
 
-기본 로그인 정보는 다음과 같습니다:
+기본 로그인 정보는 다음과 같음:
 사용자 이름: admin
 비밀번호: admin (첫 로그인 시 변경 요청)
 
 Prometheus 데이터 소스 추가:
-Grafana 인터페이스에서 다음 단계를 수행합니다:
+Grafana 인터페이스에서 다음 단계를 수행:
 왼쪽 사이드바에서 ⚙️(설정) 아이콘 클릭 → "Data Sources" 선택.
 "Add data source" 클릭 → "Prometheus" 선택.
 HTTP URL에 http://localhost:9090 입력.
 "Save & Test" 클릭하여 연결 확인.
 
 대시보드 가져오기:
-미리 구성된 대시보드를 가져오려면 다음 단계를 따릅니다:
+미리 구성된 대시보드를 가져오려면 다음 단계를 따름름:
 왼쪽 사이드바에서 "+"(추가) 아이콘 클릭 → "Import" 선택.
 대시보드 코드 입력(예: 1860) → "Load" 클릭.
 데이터 소스(Prometheus) 선택 → "Import" 클릭.
 
 
 요약:
-이 단계를 완료하면 Prometheus와 Grafana를 통해 애플리케이션 및 CI/CD 파이프라인(Jenkins 포함)을 효과적으로 모니터링할 수 있습니다!
+이 단계를 완료하면 Prometheus와 Grafana를 통해 애플리케이션 및 CI/CD 파이프라인(Jenkins 포함)을 효과적으로 모니터링할 수 있음....!
 
 
 
@@ -393,17 +393,17 @@ HTTP URL에 http://localhost:9090 입력.
 6단계: Kubernetes
 Kubernetes 클러스터 생성 및 노드 그룹 설정
 
-이 단계에서는 Kubernetes 클러스터를 노드 그룹과 함께 설정. 이를 통해 애플리케이션을 배포하고 관리할 수 있는 확장 가능한 환경을 제공합니다.
+이 단계에서는 Kubernetes 클러스터를 노드 그룹과 함께 설정. 이를 통해 애플리케이션을 배포하고 관리할 수 있는 확장 가능한 환경을 제공.
 
 
 
 
 Prometheus로 Kubernetes 모니터링
 
-Prometheus는 강력한 모니터링 및 경고 도구입니다. 이를 사용하여 Kubernetes 클러스터를 모니터링합니다. 추가적으로, Helm을 사용하여 Node Exporter를 설치하고 클러스터 노드에서 메트릭을 수집합니다.
+Prometheus는 강력한 모니터링 및 경고 도구. 이를 사용하여 Kubernetes 클러스터를 모니터링. 추가적으로, Helm을 사용하여 Node Exporter를 설치하고 클러스터 노드에서 메트릭을 수집.
 
 Helm을 사용한 Node Exporter 설치
-Kubernetes 클러스터를 모니터링하려면 Prometheus Node Exporter를 설치해야 합니다. 이 구성 요소는 클러스터 노드에서 시스템 수준의 메트릭을 수집할 수 있도록 합니다. Helm을 사용하여 Node Exporter를 설치하는 단계는 다음과 같습니다:
+Kubernetes 클러스터를 모니터링하려면 Prometheus Node Exporter를 설치. 이 구성 요소는 클러스터 노드에서 시스템 수준의 메트릭을 수집할 수 있도록 함함. Helm을 사용하여 Node Exporter를 설치하는 단계는 다음과 같음:
 
 Prometheus Community Helm 저장소 추가:
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
@@ -423,7 +423,7 @@ Prometheus 설정 파일에 새로운 작업(job)을 추가하여 nodeip:9001/me
 
 job_name에는 작업의 설명적인 이름을 입력.
 
-static_configs 섹션에서는 메트릭을 스크래핑할 대상을 지정합니다(여기서는 nodeip:9001).
+static_configs 섹션에서는 메트릭을 스크래핑할 대상을 지정(여기서는 nodeip:9001).
 Prometheus를 다시 로드하거나 재시작하여 변경 사항을 적용.
 
 
@@ -435,25 +435,11 @@ https://archive.eksworkshop.com/intermediate/290_argocd/install/
 
 
 ArgoCD 설치
-Kubernetes 클러스터에 ArgoCD를 설치합니다. 설치 방법은 EKS Workshop 문서에 제공된 지침을 참조.
-aws eks update-kubeconfig --name Netflix --region ap-northeast-2
-역할: AWS CLI를 사용하여 EKS 클러스터와 로컬 kubectl 클라이언트를 연결.
---name Netflix: 이름이 Netflix인 EKS 클러스터에 연결.
---region ap-northeast-2: 클러스터가 위치한 AWS 리전(서울)을 지정함.
-이 명령어를 실행하면 현재 컴퓨터의 kubeconfig 파일(~/.kube/config)에 해당 클러스터 정보가 추가되며, 이후 kubectl 명령어를 통해 클러스터와 통신할 수 있음.
-kubectl create namespace argocd
-역할: Kubernetes 클러스터에 argocd라는 네임스페이스(namespace)를 생성
-네임스페이스는 Kubernetes 리소스를 논리적으로 그룹화하는 데 사용. ArgoCD와 관련된 리소스(예: Pod, Service 등)를 모두 이 네임스페이스에 배치하기 위해 미리 생성하는 단계
-kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
-역할: argocd-server라는 Kubernetes 서비스(Service)의 유형을 LoadBalancer로 변경함.
-svc argocd-server: ArgoCD 서버의 서비스(Service) 이름.
--n argocd: argocd 네임스페이스에 있는 리소스를 대상으로 함.
--p '{"spec": {"type": "LoadBalancer"}}': 서비스의 스펙(spec)을 수정하여 타입을 LoadBalancer로 설정. 이 설정은 외부에서 접근 가능한 IP 주소를 할당해주는 역할을 하는데,
-이를 통해 ArgoCD UI에 브라우저로 접근할 수 있음.
+Kubernetes 클러스터에 ArgoCD를 설치. 설치 방법은 EKS Workshop 문서에 제공된 지침을 참조.
 GitHub 리포지토리를 소스로 설정
-ArgoCD를 설치한 후, GitHub 리포지토리를 애플리케이션 배포의 소스로 설정해야 함. 여기에는 리포지토리 연결 구성과 ArgoCD 애플리케이션의 소스 정의가 포함됩니다. 구체적인 단계는 설정 및 요구 사항에 따라 달라질 수 있음.
+ArgoCD를 설치한 후, GitHub 리포지토리를 애플리케이션 배포의 소스로 설정해야 함. 여기에는 리포지토리 연결 구성과 ArgoCD 애플리케이션의 소스 정의가 포함. 구체적인 단계는 설정 및 요구 사항에 따라 달라질 수 있음.
 ArgoCD 애플리케이션 생성
-다음 요소를 정의하여 ArgoCD 애플리케이션을 생성합니다:
+다음 요소를 정의하여 ArgoCD 애플리케이션을 생성:
 name: 애플리케이션 이름 설정.
 destination: 애플리케이션이 배포될 위치 정의.
 project: 애플리케이션이 속한 프로젝트 지정.
