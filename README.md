@@ -1,5 +1,16 @@
 https://velog.io/@luckyprice1103/Netflix%EC%95%B1-%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4%EB%A1%9C-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0-aws-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC-CICD-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8-%EA%B5%AC%EC%B6%95
 
+![image](https://github.com/user-attachments/assets/e7487b4e-386a-413b-a9c7-1825276bf529)
+![image](https://github.com/user-attachments/assets/9b9e1bd6-e2ec-4c12-ae57-35c9e385d6c8)
+![image](https://github.com/user-attachments/assets/45c81d74-7e11-4c48-b5b0-0438f7a823f5)
+![image](https://github.com/user-attachments/assets/66763b1e-3584-4072-9389-5be451decac4)
+![image](https://github.com/user-attachments/assets/0ff3db5e-f43d-4b25-9865-56a754a627b6)
+![image](https://github.com/user-attachments/assets/096c0fcb-c83c-48e0-9b8b-a5d84feacc45)
+![image](https://github.com/user-attachments/assets/a212e3ab-a656-484d-9fea-580537636c21)
+![image](https://github.com/user-attachments/assets/8873dc0f-60fb-43df-97d1-829f4eaf5394)
+
+
+
 
 1단계: 초기 설정 및 배포
 EC2 인스턴스 시작 (Ubuntu 22.04)
